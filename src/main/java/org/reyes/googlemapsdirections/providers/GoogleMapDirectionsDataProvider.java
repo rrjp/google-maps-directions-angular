@@ -87,7 +87,6 @@ public class GoogleMapDirectionsDataProvider implements IMapDirectionsDataProvid
      *
      * @return Object containing the directions or error.
      */
-    @Override
     public MapDirections getDirections(String from, String to)
     {
         MapDirections directions = null;
@@ -132,7 +131,7 @@ public class GoogleMapDirectionsDataProvider implements IMapDirectionsDataProvid
         MapDirections mapDirections = new MapDirections();
 
         // Parse out Google map directions to flatten the "routes" and "legs" stuff as we will only support one leg.
-        if (googleMapDirections == null || !googleMapDirections.status.equalsIgnoreCase(cs_goodStatus))
+        if (googleMapDirections == null || !cs_goodStatus.equalsIgnoreCase(googleMapDirections.status))
         {
             mapDirections.errorMessage = cs_errorMsg;
             return mapDirections;
