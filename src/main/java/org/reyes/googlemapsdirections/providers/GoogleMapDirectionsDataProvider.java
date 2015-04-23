@@ -20,10 +20,7 @@ public class GoogleMapDirectionsDataProvider implements IMapDirectionsDataProvid
     public static final Logger logger = LoggerFactory.getLogger(GoogleMapDirectionsDataProvider.class);
 
     /** Status returned from the API when it worked. */
-    public static final String cs_goodStatus = "OK";
-
-    /** Status returned from the API when it didn't work. */
-    public static final String cs_badStatus = "NOT_FOUND";
+    static final String cs_goodStatus = "OK";
 
     /** Message returned when it didn't work. Not taking the time for i18n now. */
     public static final String cs_errorMsg = "Error retrieving directions.";
@@ -126,7 +123,7 @@ public class GoogleMapDirectionsDataProvider implements IMapDirectionsDataProvid
      *
      * @return Simplified directions object.
      */
-    public MapDirections convertDirections(GoogleMapDirections googleMapDirections)
+    MapDirections convertDirections(GoogleMapDirections googleMapDirections)
     {
         MapDirections mapDirections = new MapDirections();
 
