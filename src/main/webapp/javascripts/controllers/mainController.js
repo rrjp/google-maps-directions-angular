@@ -1,5 +1,5 @@
 angular.module("gdirApp", ["ngResource", "customFilters"])
-.constant("baseUrl", "http://localhost:8080/google-maps-directions-angular/api/directions")
+.constant("baseUrl", "api/directions")
 .controller("mainController", function ($scope, $http, $resource, baseUrl) {
 
     // location object should have string members for "from" and "to" so we know where we start from and where we go to.
